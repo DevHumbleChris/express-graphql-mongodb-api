@@ -15,5 +15,14 @@
     "express-graphql": "^0.12.0",
     "graphql": "^15.5.1",
     "mongoose": "^5.13.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevHumbleChris/express-graphql-mongodb-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DevHumbleChris/express-graphql-mongodb-api/issues"
+  },
+  "homepage": "https://github.com/DevHumbleChris/express-graphql-mongodb-api#readme"
 }
