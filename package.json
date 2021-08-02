@@ -16,7 +16,9 @@
     "graphql": "^15.5.1",
     "mongoose": "^5.13.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DevHumbleChris/express-graphql-mongodb-api.git"
