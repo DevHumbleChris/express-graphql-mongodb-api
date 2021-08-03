@@ -37,6 +37,7 @@ Below are the mutations used in this project.
 
 ```
 mutation {
+#---- COMPANY MODEL ----
 # --- ADD NEW PRODUCTION COMPANY ---
   addProductionCompany(name:"New Cinema") {
     message
@@ -46,8 +47,66 @@ mutation {
     message
   }
 # --- DELETE PRODUCTION COMPANY ---
-  deleteProductionCompany(_id: "6108fbe6b64d781cd8bc825d") {
+  deleteProductionCompany(_id: "610903cfeae8f11fc4dac940") {
+    message
+  }
+
+#---- COMPANY MODEL ----
+# --- ADD NEW MOVIE ---
+  addMovie(title:"Stranger Things", prodCompany:"NetFlix") {
+    message
+  }
+# --- DELETE MOVIE ---
+  deleteMovie(_id: "61095a76e6716d35ea15ef71") {
+    message
+  }
+# --- UPDATE MOVIE TITLE ---
+  updateMovieTitle(_id: "61095a76e6716d35ea15ef71", title: "Netflix") {
+    message
+  }
+# --- UPDATE MOVIE PRODUCTION COMPANY ---
+  updateMovieProdCompany(_id: "61095a76e6716d35ea15ef71", prodCompany:"Netflix") {
     message
   }
 }
 ```
+
+# Queries.
+In GraphQL - Queries are used to ask/request for data or information. Queries are equivalent to GET request in RESTful APIS.
+
+Below are the queries used in this project.
+> Queries used to look for records on Company And Movie Model for the MongoDB :point_down:.
+
+```
+{
+# --- Get All Production Companies With Their Movies ---
+  companies {
+    name
+    _id
+    movies {
+      title
+    }
+  }
+# --- Get All Movies ---
+  movies {
+    _id
+    title
+    prodCompany
+  }
+# --- Search Movie Using Movie Title ---
+  searchMovie(title:"Blades") {
+    _id
+    prodCompany
+  }
+# --- Search Movie Using Movie Production Company And Get All Their Movies---
+  searchProdCompany(name:"Netflix") {
+    name
+    movies {
+      title
+    }
+  }
+}
+```
+Lets Chat Over.
+
+![twiiter](http://i.imgur.com/tXSoThF.png) [AmChrisKE](https://twitter.com/amchriske)
