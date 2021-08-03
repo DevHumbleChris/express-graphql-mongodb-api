@@ -4,7 +4,8 @@
   "description": "An Express GraphQL API connected with MongoDB",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "Am.Chris_KE",
   "license": "MIT",
